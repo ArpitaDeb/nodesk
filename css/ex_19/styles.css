@@ -13,7 +13,9 @@ form {
 /* needed to add button and password input selectors as well to 
 make the boxes and button match, as they do in the example */
 
-input[type="text"],input[type="password"],button {
+input[type="text"],
+input[type="password"],
+button {
     display: inline-block;
     padding: 10px;
     border: 1px solid #ddd;
