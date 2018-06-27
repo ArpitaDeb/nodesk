@@ -22,6 +22,14 @@ fieldset {
 
 label {
     display: inline-block;
+    width: 80px;
+    padding-right: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    display: inline-block;
     width: 417px;
     padding: 0.5em;
     font-size: 16px;
