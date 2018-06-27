@@ -24,7 +24,7 @@ input[type="text"],input[type="password"],button {
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="button"]:focus {
+button:focus {
     border: 1px solid #EC576B;
     box-shadow: 0 6px 6px -6px #777;
 }
