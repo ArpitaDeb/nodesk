@@ -28,5 +28,5 @@ function getHexaColor(color) {
 if (getHexaColor(inColor) == null) {
     console.log("Please enter one of the following colors: white, black, blue, green, yellow, or pink.");
 } else {
-console.log(`The color ${inColor} is ${getHexaColor(inColor)} in hex!`);
+    console.log(`The color ${inColor} is ${getHexaColor(inColor)} in hex!`);
 }
