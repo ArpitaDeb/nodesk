@@ -1,3 +1,5 @@
+let inColor = "blue";
+
 function getHexaColor(color) {
     switch (color) {
         case "white":
@@ -22,8 +24,6 @@ function getHexaColor(color) {
             return null;
     }
 }
-
-let inColor = "green";
 
 if (getHexaColor(inColor) == null) {
     console.log("Please enter one of the following colors: white, black, blue, green, yellow, or pink.");
