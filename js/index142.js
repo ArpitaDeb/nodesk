@@ -1,7 +1,7 @@
 /* "Person" arrays: [FirstName,LastName,Address,Age] */
 
-let firstPersonArr = ["John","Doe","33 Fake St.","42"];
-let secondPersonArr = ["John","Doe","33 Fake St.","42"];
+let firstPersonArr = ["John","Doe","33 Fake St.",42];
+let secondPersonArr = ["Jane","Doe","33 Fake St.",42];
 
 const firstPersonStr = firstPersonArr.reduce(function(accumulator,currentValue) {
     return accumulator + currentValue;
