@@ -1,7 +1,8 @@
-let count = 1
-let msg = ""
+let count = 1;
+let msg = "";
+
 while (count < 14) {
-    msg = msg + "*";
+    msg = '*'.repeat(count);
     console.log(msg);
-    count++;
+    count+=2;
 }
