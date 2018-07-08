@@ -1,7 +1,9 @@
-let myNums = [5,7,2,4,9];
-let sortedNums = myNums.slice(0);
+const mutants = ['Prof X','Cyclops','Iceman','Angel','Beast','Phoenix'];
+const sortedMutants = mutants.slice(0).sort();
+const reversedSortedMutants = sortedMutants.slice(0).reverse();
+const joinedMutants = mutants.join(' * ');
 
-sortednums.sort();
-
-console.log(myNums);
-console.log(sortedNums);
+console.log(`Mutants: ${mutants}`);
+console.log(`Sorted Mutants: ${sortedMutants}`);
+console.log(`Reversed \& Sorted Mutants: ${reversedSortedMutants}`);
+console.log(`Joined Mutants: ${joinedMutants}`);
