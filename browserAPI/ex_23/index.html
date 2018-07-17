@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Texts</title>
+  <script>
+    window.onload = function() {
+      let list = document.querySelector('ul');
+      for(i=1;i<5;i++){
+      list.innerHTML = list.innerHTML + `<li>Item ${i}</li>`;
+      }
+      console.log(`List innerHTML: ${list.innerHTML}`);
+      console.log(`list.children[i].innerHTML:`);
+      for(i=0;i<list.children.length;i++){
+          console.log(list.children[i].innerHTML);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+  <ul></ul>
+</body>
+</html>

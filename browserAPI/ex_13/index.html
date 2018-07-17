@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            let strcurrentCount = prompt(`Please enter a number of seconds you would like to wait`);
+            let currentCount = parseInt(strcurrentCount);
+            //const greet = function() {
+              //  console.log('Hi!');
+            //}
+            for (;currentCount > 0; currentCount -=1) {
+                setTimeout(function() {
+                    console.log(currentCount);
+                }, 1000);
+            }            
+            /*
+            while(currentCount > 0){
+                setTimeout(greet, 1000);
+                currentCount -= 1;
+            }
+            */
+            alert(`Time's up!`);
+        </script>
+    </head>
+</html>
