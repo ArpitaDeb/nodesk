@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Products</title>
+    <script>
+        window.onload = function () {
+            let list = document.querySelector('ul');
+            let listLength = list.children.length;
+            let i = listLength - 1
+            for (i = listLength - 1; i > -1; i--) {
+                console.log(`Start iteration:\nlistLength: ${listLength}\ni: ${i}`);
+                let toRemove = list.children.item(i);
+                console.log(`Removing: ${toRemove.innerHTML}`);
+                list.removeChild(toRemove);
+                console.log(`list.children.length: ${list.children.length}`);
+                console.log(`listLength: ${listLength}\nEnd Iteration`);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>Bannana</li>
+        <li>Apple</li>
+        <li>Peach</li>
+        <li>Eggs</li>
+        <li>Tomatto</li>
+        <li>Lettuce</li>
+        <li>Milk</li>
+    </ul>
+</body>
+
+</html>
