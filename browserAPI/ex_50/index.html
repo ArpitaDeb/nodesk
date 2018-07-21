@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <script>
+    window.onload = function() {
+
+      const form = document.querySelector('form');
+      
+      const validateUser = function(username) {
+        const userRegex = /^[a-z0-9]+$/i;  //alphanumeric only
+        return userRegex.test(username);
+      }
+      const validatePass = function(password) {
+        const passRegex = /^[a-z0-9]+$/i; //alphanumeric only
+        return passRegex.test(password);
+      }
+      const validateEmail = function(email) {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;  //email only
+        return emailRegex.test(email);
+      }
+      
+      form.onsubmit = function(event) {
+        event.preventDefault();
+
+        const username = form.elements[0];
+        const email = form.elements[1];
+        const password = form.elements[2];
+        
+        if (!validateUser(username.value)) {
+          alert('Your username is invalid. Please use only characters a-z or 0-9');
+          return false;
+        }
+
+        if (!validatePass(password.value)) {
+          alert('Your password is invalid. Please use only characters a-z or 0-9');
+          return false;
+        }
+
+        if(!validateEmail(email.value)) {
+          alert('Your email is invalid. Please ensure you enter a REAL email address');
+          return false;
+        }
+        
+        alert('Send successful!')
+        return true;
+      }
+    }
+  </script>
+  <style>
+    .error { 
+      color: red; 
+      background-color: pink;
+      border: 1px solid red;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" placeholder="username" />
+    <input type="text" id="email" name="email" placeholder="email">
+    <input type="password" id="pass" name="pass" placeholder="password"/>
+    <input type="submit" name="submit" value="Send" placeholder="submit"/>
+  </form>
+  <div id="errors"></div>
+</body>
+</html>

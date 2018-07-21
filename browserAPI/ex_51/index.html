@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JSON</title>
+  <script>
+      window.onload = function() {
+      let response = 
+      `{
+  "title": "A New Hope", 
+  "episode_id": 4, 
+  "species": [
+    "https://swapi.co/api/species/5/", 
+    "https://swapi.co/api/species/3/", 
+    "https://swapi.co/api/species/2/", 
+    "https://swapi.co/api/species/1/", 
+    "https://swapi.co/api/species/4/"
+  ]
+}`
+
+    let jsonJS = JSON.parse(response);
+    let jsonResponse = document.getElementById('jsonresponse');
+    let movieTitle = document.createElement('h1');
+    let episodeID = document.createElement('p');
+    
+    jsonResponse.appendChild(movieTitle);
+    jsonResponse.appendChild(episodeID);
+    movieTitle.textContent = jsonJS.title;
+    episodeID.textContent = `Episode ID: ${jsonJS.episode_id}`;
+
+    for(i=0;i<jsonJS.species.length;i++) {
+        let species = document.createElement('div')
+        jsonResponse.appendChild(species);
+        species.innerHTML = `<a href=\"${jsonJS.species[i]}\">Species ${i+1}</a>`
+    }
+
+}
+
+  </script>
+</head>
+<body>
+  <div id="jsonresponse"></div>
+</body>
+</html>
+
