@@ -1,11 +1,12 @@
+extends ./layout.pug
 include otherThing
-doctype html
-html(lang='en')
-    head
-        title= title
-    body
-        h1= header
-        div.container
-            p Hi?!?!
-        body
-            +derp
+include thirdThing
+
+block content
+    h1= header
+    div.container
+        p= message
+        +derp
+        +thirdThing({'name': 'Header 3', 'description': 'This content is given as a parameter for calling the 2nd mixin'})
+    h1 Block Content
+    p Here is some text as block content (brought from blocks.pug)

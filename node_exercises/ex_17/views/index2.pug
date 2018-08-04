@@ -1,0 +1,10 @@
+extends ./layout.pug
+
+block content
+    - const option1 = 'This is option 1'
+    - const option2 = 'This is option 2'
+
+    if 1 != 1
+        p= option1
+    else
+        p= option2
